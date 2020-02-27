@@ -1,0 +1,8 @@
+<%= simple_form_for cocktail do |f| %>
+  <%= f.input :name %>
+
+
+  <%= f.submit 'Create cocktail', class: 'btn btn-success' %>
+  <%= link_to 'Back to index', cocktails_path, class: 'btn btn-link' %>
+
+<% end %>

@@ -1,0 +1,16 @@
+<div class = "d-flex justify-content-between align-items-end px-4 py-2">
+<h1  class="text-center" >Your Cocktails List</h1>
+<p><%= link_to 'New cocktail', new_cocktail_path, class: 'btn btn-primary' %></p>
+</div>
+
+<div class="shadow mb-5 bg-white rounded">
+  <% @cocktails.each do |cocktail| %>
+    <div class="border-bottom py-2 px-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="card-category">
+          <%= link_to cocktail.name, cocktail_path(cocktail), class: 'font-weight-bolder text-dark' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
