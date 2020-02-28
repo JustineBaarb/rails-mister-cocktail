@@ -46,3 +46,41 @@
 .card-link:hover {
   opacity: 0.1;
 }
+
+.card-trip {
+  animation: 3s ease-in 1s infinite reverse both running slidein;
+}
+
+.sticker {
+
+width: 180px;
+
+height: 180px;
+
+}
+
+// add image
+
+.example-1 .sticker-img {
+
+background-image: url(heroes-2.png);
+
+}
+
+
+// add color
+
+.example-2 .sticker-img {
+
+background-color: #ff4a85;
+
+}
+
+
+// change shadow opacity
+
+.example-2 .sticker-shadow {
+
+opacity: 0.6;
+
+}

@@ -1,17 +1,71 @@
-<div class = "d-flex justify-content-between align-items-end px-4 py-2">
-<h1  class="text-center" >Your Cocktails List</h1>
-<p><%= link_to 'New cocktail', new_cocktail_path, class: 'btn btn-primary' %></p>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon  ">
+  <a class="navbar-brand avatar-large spinner-grow text-light" role="status" href="#">
+    <span class="sr-only">Loading...</span>
+    <img src="data:image/png;base64,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" />
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <p><%= link_to 'Home', cocktails_path, class: 'nav-link btn btn-flat' %></p>
+      </li>
+      <li class="nav-item">
+        <p><%= link_to 'New cocktail', new_cocktail_path, class: 'nav-link btn btn-flat' %></p>
+      </li>
+      <li class="nav-item dropdown">
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 
-<div class="shadow mb-5 bg-white rounded">
+<div class = "d-flex justify-content-between align-items-end px-4 py-2">
+<h1  class="text-center mb-3 spinner-border text-info" role="status">Drink</h1>
+  <span class="sr-only">Loading...</span>
+</div>
+
+
+
+
+
+
+
+
+<div class="home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn-media.rtl.fr/cache/S2FCfXqKPVm_d5rFkoVa0Q/880v587-0/online/image/2018/1109/7795509987_emmanuel-macron-a-lens-le-9-novembre-2018.jpg);">
+  <div class="container" data-aos="zoom-in-up">
+      <h1>  YOUR COCKTAILS</h1>
+    <div class="row">
   <% @cocktails.each do |cocktail| %>
-    <div class="border-bottom py-2 px-3">
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="card-category">
+    <div class="card-trip">
+      <div class="bg-white m-2 py-4 px-3 rounded shadow-sm ">
           <%= link_to cocktail.name, cocktail_path(cocktail), class: 'font-weight-bolder text-dark' %>
-          <%= cl_image_tag("xh0tkyxo9djaft054u1w", width: 400, height: 300, crop: :fill) %>
-        </div>
+          <%= cl_image_tag("xh0tkyxo9djaft054u1w", width: 200, height: 100, crop: :fill) %>
+<!--  -->        </div>
       </div>
-    </div>
   <% end %>
 </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
