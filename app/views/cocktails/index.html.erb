@@ -9,8 +9,11 @@
       <div class="d-flex justify-content-between align-items-center">
         <div class="card-category">
           <%= link_to cocktail.name, cocktail_path(cocktail), class: 'font-weight-bolder text-dark' %>
+          <%= cl_image_tag("xh0tkyxo9djaft054u1w", width: 400, height: 300, crop: :fill) %>
         </div>
       </div>
     </div>
   <% end %>
 </div>
+
+
